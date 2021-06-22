@@ -1,0 +1,57 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    
+    {% if user.is_authenticated %}
+
+    <!-- Button trigger modal -->
+    <div class="row justify-content-md-center">
+        <div class="col col-md-auto">
+            <input class="form-control form-control-lg mb-4" type="text" data-toggle="modal" data-target="#exampleModalCenter" placeholder="Say something..."/>
+        </div>
+    </div>
+
+    <!-- Modal to create a new post-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Say something...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="POST" action="/create_post">
+                    <div class="modal-body">
+                        <div id="create_post" class="row"> 
+                            <div class="col">                                    
+                                <input type="hidden" value="/" name="next"/>
+                                <textarea maxlength="240" autofocus="autofocus" id="textarea" required="required" class="form-control" name="content" placeholder="Your post..."></textarea>
+                                <p class="text-muted">Characters left: <span id="counter" ></span></p>
+                                <script type="text/javascript">
+                                    const textarea = document.querySelector("#textarea")
+                                    const maxlength = textarea.getAttribute("maxlength")
+                                    const counter = document.getElementById('counter')
+                                    counter.innerHTML = maxlength
+                                    textarea.onkeyup = function () {
+                                        counter.innerHTML = maxlength - this.value.length
+                                        if (maxlength - this.value.length === 0) {alert("Post is too long")}
+                                    }
+                                </script>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">            
+                        <button type="submit" class="btn btn-primary">Publish</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endif %} 
+
+    <div id="all_posts" />    
+    <script src="{% static 'index-bundle.js' %}"></script>
+
+{% endblock %}

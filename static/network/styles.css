@@ -1,0 +1,123 @@
+.like_button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+}
+
+.like_button:focus {
+    outline: none;
+}
+.far:hover, .fas:hover {
+    transform: scale(1.4);
+}
+
+.follow-button {
+    color: #3399FF;
+    font-family: "Helvetica";
+    font-size: 10pt;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #3399FF;
+    border-radius: 3px;
+    width: 85px;
+    height: 30px;    
+    top: 50px;
+    left: 50px;	
+    cursor: hand;	    
+}
+
+.unfollow-button {
+    color: #fff;
+    background-color: #2EB82E;
+    border-color: #2EB82E;
+    font-family: "Helvetica";
+    font-size: 10pt;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 85px;
+    height: 30px;    
+    top: 50px;
+    left: 50px;	
+    cursor: hand;
+}
+
+.unfollow-button:hover, .follow-button:hover {
+    transform: scale(1.1);
+}
+
+.unfollow-button:focus, .follow-button:focus {
+    outline: none;
+}
+
+textarea.form-control {
+    height: 150px;
+    width: 100%;
+}
+
+.button_profile {
+    background-color: transparent;
+    border: none;
+}
+
+.edit {
+    padding-top: 0;
+    padding-left: 0;
+}
+
+
+/* React pagination */
+
+.container-pages {
+    display: flex;
+    list-style: none;
+}
+
+.page{
+	padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.disabled{
+    cursor: none;
+    opacity: 20%;   
+}
+
+
+.active{
+	border: 2px solid #000;
+    font-weight: bold;
+}
+
+.previous{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.break{
+    padding: 10px;
+}
+
+.next{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
