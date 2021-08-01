@@ -12,7 +12,7 @@ https://cs50.harvard.edu/web/2020/projects/4/network/
 
 ### HYBRID APP DJANGO+REACT
 
-It wasn't that much clear if the project has to be made using React or not. So I've build an hybrid app using both Django and React.
+I've build an hybrid app using both Django and React.
 
 Django is handling all of the backend and little parts of the front-end. React was used to build components such as posts to be reusable in every page, I've used react hooks and AJAX calls. I've also used ESlint to help me out and of course installed node.js.
 Django code is therefore mostly a REST API without using DRF (django rest framework) nor built-in serializer. 
